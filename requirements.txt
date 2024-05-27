@@ -1,0 +1,4 @@
+Django
+celery
+redis
+python-telegram-bot

@@ -1,0 +1,12 @@
+{% extends 'news_manager/base.html' %}
+
+{% block title %}Manage Subscription{% endblock %}
+
+{% block content %}
+<h2>Manage Subscription</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Update Subscription</button>
+</form>
+{% endblock %}

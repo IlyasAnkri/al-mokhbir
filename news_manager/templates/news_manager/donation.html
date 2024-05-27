@@ -1,0 +1,12 @@
+{% extends 'news_manager/base.html' %}
+
+{% block title %}Donate - Al Mokhbir{% endblock %}
+
+{% block content %}
+<h2>Donate to Al Mokhbir</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Donate</button>
+</form>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'news_manager/base.html' %}
+{% load static %}
+
+{% block title %}Home - Al Mokhbir{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center">
+    <h1 class="display-4">Welcome to Al Mokhbir</h1>
+    <p class="lead">Your source for aggregated and summarized news.</p>
+    <img src="{% static 'imgs/no_bg.png' %}" class="img-fluid rounded" alt="Responsive image">
+    <hr class="my-4">
+    <p>Use the navigation bar to manage news sources and bot settings.</p>
+    <div class="col-md-8">
+            <div class="d-grid gap-2">
+                <a href="https://t.me/meimnoon" class="btn btn-secondary btn-lg" target="_blank">
+                    Go to Meimnoon (the original bot place)
+                </a>
+                <a href="https://t.me/almokhbir_bot" class="btn btn-success btn-lg" target="_blank">
+                    Have a chat with Al-Mokhbir
+                </a>
+            </div>
+        </div>
+</div>
+{% endblock %}

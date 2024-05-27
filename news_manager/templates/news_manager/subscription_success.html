@@ -1,0 +1,13 @@
+{% extends 'news_manager/base.html' %}
+
+{% block title %}Subscription Successful{% endblock %}
+
+{% block content %}
+<h2>Subscription Successful</h2>
+<p>Your subscription to premium features has
+    been successful. You can now enjoy all the
+    benefits of a premium subscription.</p>
+
+<a href="{% url 'index' %}" class="btn btn-primary">Back to Home</a>
+
+{% endblock %}

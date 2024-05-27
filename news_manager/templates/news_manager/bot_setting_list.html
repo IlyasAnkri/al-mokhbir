@@ -1,0 +1,27 @@
+{% extends 'news_manager/base.html' %}
+
+{% block title %}Bot Settings - Al Mokhbir{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Bot Settings</h1>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Value</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for bot_setting in bot_settings %}
+        <tr>
+            <td>{{ bot_setting.name }}</td>
+            <td>{{ bot_setting.value }}</td>
+            <td>
+                <a href="{% url 'edit_bot_setting' bot_setting.pk %}" class="btn btn-sm btn-warning">Edit</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

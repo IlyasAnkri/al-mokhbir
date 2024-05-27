@@ -1,0 +1,9 @@
+{% extends 'news_manager/base.html' %}
+
+{% block title %}Subscription Cancelled{% endblock %}
+
+{% block content %}
+<h2>Subscription Cancelled</h2>
+<p>Your subscription process was cancelled. Please try again.</p>
+<a href="{% url 'pricing' %}" class="btn btn-primary">Back to Pricing</a>
+{% endblock %}

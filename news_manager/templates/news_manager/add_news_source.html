@@ -1,0 +1,15 @@
+{% extends 'news_manager/base.html' %}
+
+{% block title %}Add News Source - Al Mokhbir{% endblock %}
+
+{% block content %}
+<h1>Add News Source</h1>
+<form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        {{ form.as_p }}
+    </div>
+    <button type="submit" class="btn btn-success">Save</button>
+    <a href="{% url 'news_source_list' %}" class="btn btn-secondary">Back to list</a>
+</form>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'news_manager/base.html' %}
+
+{% block title %}Delete News Source - Al Mokhbir{% endblock %}
+
+{% block content %}
+<h1>Delete News Source</h1>
+<p>Are you sure you want to delete "{{ news_source.name }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="{% url 'news_source_list' %}" class="btn btn-secondary">Cancel</a>
+</form>
+{% endblock %}

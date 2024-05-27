@@ -1,0 +1,31 @@
+{% extends 'news_manager/base.html' %}
+
+{% block title %}News Sources - Al Mokhbir{% endblock %}
+
+{% block content %}
+<h1>News Sources</h1>
+<a href="{% url 'add_news_source' %}" class="btn btn-primary mb-3">Add News Source</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>URL</th>
+            <th>Source Type</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for news_source in news_sources %}
+        <tr>
+            <td>{{ news_source.name }}</td>
+            <td>{{ news_source.url }}</td>
+            <td>{{ news_source.source_type }}</td>
+            <td>
+                <a href="{% url 'edit_news_source' news_source.pk %}" class="btn btn-sm btn-warning">Edit</a>
+                <a href="{% url 'delete_news_source' news_source.pk %}" class="btn btn-sm btn-danger">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
